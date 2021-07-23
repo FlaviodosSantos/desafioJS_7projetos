@@ -13,8 +13,17 @@ reset();
 
 // Events
 document.querySelector('.reset').addEventListener('click', reset);
+document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', itemClick);
+});
+
 
 // Functions
+function itemClick(event) {
+    let item = event.target.getAttribute('data-item');
+    console.log("clicou: ", item);
+}
+
 function reset() {
     warning = '';
 
@@ -50,6 +59,8 @@ function renderSquare() {
 
 
 function renderInfo() {
+    document.querySelector('.vez').innerHTML = player;
+    document.querySelector('.resultado').innerHTML = warning;
 
 
 }
