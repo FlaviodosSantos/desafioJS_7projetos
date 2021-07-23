@@ -74,4 +74,5 @@ function togglePlayer() {
     } else {
         player = 'x';
     }
+    renderInfo();
 }
