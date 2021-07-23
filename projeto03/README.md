@@ -1,1 +1,1 @@
-## Busca clima de uma cidade
+## Busca clima/tempo de uma cidade
