@@ -21,7 +21,12 @@ document.querySelectorAll('.item').forEach(item => {
 // Functions
 function itemClick(event) {
     let item = event.target.getAttribute('data-item');
-    console.log("clicou: ", item);
+    //console.log("clicou: ", item);
+    if (square[item] === '') {
+        square[item] = player;
+        renderSquare();
+        togglePlayer();
+    }
 }
 
 function reset() {
@@ -61,6 +66,12 @@ function renderSquare() {
 function renderInfo() {
     document.querySelector('.vez').innerHTML = player;
     document.querySelector('.resultado').innerHTML = warning;
+}
 
-
+function togglePlayer() {
+    if (player === 'x') {
+        player = 'o';
+    } else {
+        player = 'x';
+    }
 }
