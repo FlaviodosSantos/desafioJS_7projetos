@@ -46,6 +46,7 @@ function finishQuiz() {
     let points = Math.floor((correctAnwers / questions.length) * 100);
 
     document.querySelector('.scorePct').innerHTML = `Acertou ${points}%`;
+    document.querySelector('.scoreText2').innerHTML = `Você respondeu ${questions.length} questões e acertou ${correctAnwers}.`;
 
     document.querySelector('.scoreArea').style.display = 'block';
     document.querySelector('.questionArea').style.display = 'none';
