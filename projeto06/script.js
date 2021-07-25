@@ -45,6 +45,17 @@ function optionClickEvent(e) {
 function finishQuiz() {
     let points = Math.floor((correctAnwers / questions.length) * 100);
 
+    if (points < 30) {
+        document.querySelector('.scoreText1').innerHTML = 'Tá ruim eim ?!';
+        document.querySelector('.scorePct').style.color = '#FF0000';
+    } else if (points >= 30 && points < 70) {
+        document.querySelector('.scoreText1').innerHTML = 'Muito bom!';
+        document.querySelector('.scorePct').style.color = '#FFFF00';
+    } else if (points >= 70) {
+        document.querySelector('.scoreText1').innerHTML = 'Parabéns!';
+        document.querySelector('.scorePct').style.color = '#0D630D';
+    }
+
     document.querySelector('.scorePct').innerHTML = `Acertou ${points}%`;
     document.querySelector('.scoreText2').innerHTML = `Você respondeu ${questions.length} questões e acertou ${correctAnwers}.`;
 
