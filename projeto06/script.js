@@ -43,6 +43,11 @@ function optionClickEvent(e) {
 }
 
 function finishQuiz() {
+    let points = Math.floor((correctAnwers / questions.length) * 100);
+
+    document.querySelector('.scorePct').innerHTML = `Acertou ${points}%`;
+
     document.querySelector('.scoreArea').style.display = 'block';
     document.querySelector('.questionArea').style.display = 'none';
+    document.querySelector('.progress--bar').style.width = `100%`;
 }
