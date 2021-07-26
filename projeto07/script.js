@@ -20,3 +20,15 @@ function dragEnd(e) {
 }
 
 // Functions Area
+function dragOver(e) {
+    e.preventDefault();
+    e.currentTarget.classList.add('hover');
+}
+
+function dragLeave(e) {
+    e.currentTarget.classList.remove('hover');
+}
+
+function drop(e) {
+
+}
