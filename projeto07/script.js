@@ -4,6 +4,12 @@ document.querySelectorAll('.item').forEach(item => {
     item.addEventListener('dragend', dragEnd);
 });
 
+document.querySelectorAll('.area').forEach(area => {
+    area.addEventListener('dragover', dragOver);
+    area.addEventListener('dragleave', dragLeave);
+    area.addEventListener('drop', drop);
+});
+
 // Functions Item
 function dragStart(e) {
     e.currentTarget.classList.add('dragging');
